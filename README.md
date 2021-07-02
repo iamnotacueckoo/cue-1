@@ -142,7 +142,6 @@ an existing set of Kubernetes configurations is available in
 
 - [`cue` Command line reference](./doc/cmd/cue.md): the `cue` command
 
-
 ### Contributing
 
 Our canonical Git repository is located at
