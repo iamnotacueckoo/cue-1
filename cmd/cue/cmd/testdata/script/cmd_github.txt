@@ -178,6 +178,7 @@ on:
     - '**'
     tags-ignore:
     - v*
+  pull_request: {}
 jobs:
   start:
     runs-on: ubuntu-18.04
@@ -1153,9 +1154,12 @@ workflows:           [...{
 }]
 test: _#bashWorkflow & {
 	name: "Test"
-	on: push: {
-		branches: ["**"]
-		"tags-ignore": [_#releaseTagPattern]
+	on: {
+		push: {
+			branches: ["**"]
+			"tags-ignore": [_#releaseTagPattern]
+		}
+		pull_request: {}
 	}
 	jobs: {
 		start: {

@@ -56,6 +56,7 @@ test: _#bashWorkflow & {
 			branches: ["**"] // any branch (including '/' namespaced branches)
 			"tags-ignore": [_#releaseTagPattern]
 		}
+		pull_request: {}
 	}
 
 	jobs: {
